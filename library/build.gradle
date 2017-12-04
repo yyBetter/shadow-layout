@@ -1,8 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 14
@@ -11,6 +12,12 @@ android {
         versionName project.VERSION_NAME
     }
 
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 
 // Used to push in maven
